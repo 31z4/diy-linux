@@ -17,18 +17,21 @@ RUN set -ex; \
         wget; \
     rm -rf /var/lib/apt/lists/*
 
-ARG DISTRO_NAME=buildroot-2018.08.2
-ARG CHECKSUM=1f9e02722362ece517251bcc1bac60f678676b7c
+ARG DISTRO_NAME=buildroot-2019.08
+ARG CHECKSUM=04440748d3d7a296af59c43c607639297240040c
 
 # Download Buildroot, verify its checksum, untar and clean up.
 RUN set -ex; \
     wget -q https://buildroot.org/downloads/${DISTRO_NAME}.tar.gz; \
     echo "${CHECKSUM} ${DISTRO_NAME}.tar.gz" | sha1sum -c -; \
-    tar -xzf ${DISTRO_NAME}.tar.gz; \
-    chown -R nobody:nogroup ${DISTRO_NAME}; \
+    mkdir -p /buildroot/output/images; \
+    tar -xzf ${DISTRO_NAME}.tar.gz -C /buildroot --strip-components=1; \
+    chown -R nobody:nogroup /buildroot; \
     rm ${DISTRO_NAME}.tar.gz
 
-WORKDIR ${DISTRO_NAME}
-VOLUME ["/output", "/dl"]
+WORKDIR /buildroot
+VOLUME /buildroot/dl \
+       /buildroot/projects \
+       /buildroot/output/images
 
 USER nobody
