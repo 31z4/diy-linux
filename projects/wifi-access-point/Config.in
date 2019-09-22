@@ -1,0 +1,6 @@
+config WIFI_ACCESS_POINT_SSID
+    string "Network name"
+    default "somenet"
+
+config WIFI_ACCESS_POINT_PSK
+    string "WPA preshared key"

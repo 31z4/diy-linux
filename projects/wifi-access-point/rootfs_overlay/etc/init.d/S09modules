@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Load kernel modules
+#
+
+case "$1" in
+  start)
+	echo "Loading kernel modules..."
+	modprobe brcmfmac
+	;;
+  stop)
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

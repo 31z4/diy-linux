@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Set firewall rules
+#
+
+case "$1" in
+  start)
+	echo "Setting firewall rules..."
+	iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+	iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+	iptables -A FORWARD -i wlan0 -o eth0 -j ACCEPT
+	;;
+  stop)
+    iptables -F
+	;;
+  restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

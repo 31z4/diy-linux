@@ -1,0 +1,17 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+  wait-delay 15
+  hostname $(hostname)
+
+auto wlan0
+iface wlan0 inet static
+  address 10.0.0.1
+  netmask 255.255.255.0
+  pre-up wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant.conf
+  post-up udhcpd
+  pre-down killall -q udhcpd
+  post-down killall -q wpa_supplicant
+  wait-delay 15
