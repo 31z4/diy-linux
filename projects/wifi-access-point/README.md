@@ -23,7 +23,6 @@ and set the following configuration options.
 Located at `System configuration -> Enable root login with password -> Root password`.
 
 Use only crypt-encoded password because it appears as-is in the `.config` file, and may appear in the build log!
-
 To encode password on the host system run:
 
     docker run -it --rm busybox mkpasswd -m sha512
