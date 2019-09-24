@@ -1,6 +1,19 @@
 config WIFI_ACCESS_POINT_SSID
-    string "Network name"
+    string "Wi-Fi network name (SSID)"
     default "somenet"
+    help
+      Wi-Fi network name as an ASCII string.
 
 config WIFI_ACCESS_POINT_PSK
     string "WPA preshared key"
+    help
+      The key used in WPA-PSK mode can be entered either as
+      64 hex-digits, i.e., 32 bytes or as an ASCII passphrase
+      (in which case, the real PSK will be generated using
+      the passphrase and SSID). ASCII passphrase must be between
+      8 and 63 characters (inclusive).
+
+      WARNING! WARNING!
+      The key appears as-is in the .config file, and may appear
+      in the build log! Avoid using a valuable key if either
+      the .config file or the build log may be distributed.

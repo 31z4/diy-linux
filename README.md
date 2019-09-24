@@ -22,7 +22,7 @@ I've been passionate about building customized systems [since the year 2006](htt
 
 Run a shell within a Buildroot container
 
-    docker run -it \
+    docker run -it --rm \
     -v `pwd`/dl:/buildroot/dl \
     -v `pwd`/projects:/buildroot/projects \
     -v `pwd`/images:/buildroot/output/images \

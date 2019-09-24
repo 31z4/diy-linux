@@ -16,11 +16,35 @@ Enter an interactive curses-based configurator
     make BR2_EXTERNAL=projects/wifi-access-point raspberrypi3_64_defconfig
     make menuconfig
 
-and set the following configuration options:
+and set the following configuration options.
 
-* Root password at `System configuration -> Enable root login with password`
-* Wireless network name at `External options`
-* WPA preshared key at `External options`
+### Root password
+
+Located at `System configuration -> Enable root login with password -> Root password`.
+
+Use only crypt-encoded password because it appears as-is in the `.config` file, and may appear in the build log!
+
+To encode password on the host system run:
+
+    docker run -it --rm busybox mkpasswd -m sha512
+
+### Wi-Fi network name (SSID)
+
+Located at `External options`.
+
+### WPA preshared key
+
+Located at `External options`.
+
+The key used in WPA-PSK mode can be entered either as 64 hex-digits, i.e., 32 bytes or as an ASCII
+passphrase (in which case, the real PSK will be generated using the passphrase and SSID).
+ASCII passphrase must be between 8 and 63 characters (inclusive).
+
+Separate tool, `wpa_passphrase`, can be used to generate 256-bit keys from ASCII passphrase.
+This process uses lot of CPU and `wpa_supplicant` startup and reconfiguration time can be optimized
+by generating the PSK only only when the passphrase or SSID has actually changed.
+
+    docker run -it --rm alpine sh -c 'apk add wpa_supplicant && wpa_passphrase SSID passphrase'
 
 ## Build
 
