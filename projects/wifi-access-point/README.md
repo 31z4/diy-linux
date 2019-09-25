@@ -23,9 +23,12 @@ and set the following configuration options.
 Located at `System configuration -> Enable root login with password -> Root password`.
 
 Use only crypt-encoded password because it appears as-is in the `.config` file, and may appear in the build log!
+
+Note: `$` signs in the hashed password must be doubled.
+Otherwise `make` would attempt to interpret the `$` as a variable expansion.
 To encode password on the host system run:
 
-    docker run -it --rm busybox mkpasswd -m sha512
+    echo supersecret | docker run -i --rm busybox mkpasswd -m sha256 | sed 's/\$/\$\$/g'
 
 ### Wi-Fi network name (SSID)
 

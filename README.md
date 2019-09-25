@@ -40,7 +40,7 @@ To figure out an SD card disk name on macOS host run the following command:
 
 Double-check the disk name and flash the image to it:
 
-    sudo dd if=images/sdcard.img of=/dev/disk-name
+    sudo dd bs=1m if=images/sdcard.img of=/dev/disk-name
 
 If you get the following error
 
