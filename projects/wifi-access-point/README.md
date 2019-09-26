@@ -7,6 +7,7 @@ It consists of the following major components:
 * [BusyBox](https://busybox.net)
 * [udhcp](https://udhcp.busybox.net) as a DHCP client and server
 * [wpa_supplicant](https://w1.fi/wpa_supplicant/) to set up a Wi-Fi access point
+* [Dropbear](https://matt.ucc.asn.au/dropbear/dropbear.html) as an SSH server
 * iptables to set up NAT
 
 ## Configure
@@ -56,7 +57,7 @@ Once build is successfully done you can follow general instructions to [flash th
 
 ## Future improvements
 
-* Add an SSH daemon.
 * Set up DNS based ad filtering.
 * Add basic monitoring capabilities.
+* Enhance logging.
 * Decrease power consumption.
