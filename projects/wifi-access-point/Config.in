@@ -4,14 +4,17 @@ config WIFI_ACCESS_POINT_SSID
     help
       Wi-Fi network name as an ASCII string.
 
+config WIFI_ACCESS_POINT_CHANNEL
+    int "Channel number (IEEE 802.11)"
+    default 36
+    help
+      0 is not supported.
+
 config WIFI_ACCESS_POINT_PSK
     string "WPA preshared key"
     help
-      The key used in WPA-PSK mode can be entered either as
-      64 hex-digits, i.e., 32 bytes or as an ASCII passphrase
-      (in which case, the real PSK will be generated using
-      the passphrase and SSID). ASCII passphrase must be between
-      8 and 63 characters (inclusive).
+      This must be entered as a 256-bit secret in hex format
+      (64 hex digits).
 
       WARNING! WARNING!
       The key appears as-is in the .config file, and may appear

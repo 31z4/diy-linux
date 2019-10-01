@@ -6,7 +6,7 @@ It consists of the following major components:
 
 * [BusyBox](https://busybox.net)
 * [udhcp](https://udhcp.busybox.net) as a DHCP client and server
-* [wpa_supplicant](https://w1.fi/wpa_supplicant/) to set up a Wi-Fi access point
+* [hostapd](https://w1.fi/hostapd/) to set up a Wi-Fi access point
 * [Dropbear](https://matt.ucc.asn.au/dropbear/dropbear.html) as an SSH server
 * iptables to set up NAT
 
@@ -35,16 +35,21 @@ To encode password on the host system run:
 
 Located at `External options`.
 
+### Channel number (IEEE 802.11)
+
+Located at `External options`.
+
+Note, that automatic Wi-Fi channel selection is not supported by driver yet.
+Hence, `hostapd` won't start if this value is set to `0`.
+
 ### WPA preshared key
 
 Located at `External options`.
 
-The key used in WPA-PSK mode can be entered either as 64 hex-digits, i.e., 32 bytes or as an ASCII
-passphrase (in which case, the real PSK will be generated using the passphrase and SSID).
-ASCII passphrase must be between 8 and 63 characters (inclusive).
+The key used in WPA-PSK mode must be entered as 64 hex-digits.
 
 Separate tool, `wpa_passphrase`, can be used to generate 256-bit keys from ASCII passphrase.
-This process uses lot of CPU and `wpa_supplicant` startup and reconfiguration time can be optimized
+This process uses lot of CPU and `hostapd` startup and reconfiguration time can be optimized
 by generating the PSK only only when the passphrase or SSID has actually changed.
 
     docker run -it --rm alpine sh -c 'apk add wpa_supplicant && wpa_passphrase SSID passphrase'

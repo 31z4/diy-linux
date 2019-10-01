@@ -10,8 +10,8 @@ auto wlan0
 iface wlan0 inet static
   address 10.0.0.1
   netmask 255.255.255.0
-  pre-up wpa_supplicant -B -iwlan0 -c/etc/wpa_supplicant.conf
+  pre-up hostapd -B /etc/hostapd.conf
   post-up udhcpd
   pre-down killall -q udhcpd
-  post-down killall -q wpa_supplicant
+  post-down killall -q hostapd
   wait-delay 15
