@@ -10,6 +10,7 @@ RUN set -ex; \
         ca-certificates \
         cpio \
         file \
+        git \
         libncurses5-dev \
         python \
         rsync \

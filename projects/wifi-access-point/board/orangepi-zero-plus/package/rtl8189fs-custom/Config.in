@@ -1,0 +1,10 @@
+config BR2_PACKAGE_RTL8189FS_CUSTOM
+	bool "rtl8189fs-custom"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Wireless driver rtl8189fs.
+
+	  https://github.com/jwrdegoede/rtl8189ES_linux.git
+
+comment "rtl8189fs-custom needs a Linux kernel to be built"
+	depends on !BR2_LINUX_KERNEL

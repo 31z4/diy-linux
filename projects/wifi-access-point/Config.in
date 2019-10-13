@@ -1,3 +1,5 @@
+source "$BR2_EXTERNAL_WIFI_ACCESS_POINT_PATH/board/orangepi-zero-plus/package/rtl8189fs-custom/Config.in"
+
 config WIFI_ACCESS_POINT_SSID
     string "Wi-Fi network name (SSID)"
     default "somenet"

@@ -6,11 +6,12 @@ This is a set of Linux system configurations for [Buildroot](https://buildroot.o
 * Do research projects like a highly available [Kubernetes](http://kubernetes.io) cluster out of 8 [Raspberry Pi](http://raspberrypi.org) or similar hardware. Or a 1024-core supercomputer for AI out of [Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit).
 * Have fun ;)
 
-I've been passionate about building customized systems [since the year 2006](https://sourceforge.net/projects/legobsd/).
+I've been passionate about building embedded systems [since the year 2006](https://sourceforge.net/projects/legobsd/).
 
 ## List of projects
 
-* [Raspberry Pi 3 Model B+ Wireless Access Point](projects/wifi-access-point/README.md)
+* [Raspberry Pi 3 Model B+ Wireless Access Point](projects/wifi-access-point/board/raspberrypi3-64/README.md)
+* [Orange Pi Zero Plus Wireless Access Point](projects/wifi-access-point/board/orangepi-zero-plus/README.md)
 
 ## Usage
 
