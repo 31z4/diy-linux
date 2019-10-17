@@ -59,6 +59,25 @@ Once `dd` process is finished don't forget to eject the disk:
 
 The build is slow and eventually fails if Buildroot `output` directory is a Docker volume mounted on the macOS host.
 
+## Interesting hardware for future projects
+
+* [COMPEX embedded boards](https://compex.com.sg/embedded-board/)
+* [Banana Pi single board computers](http://www.banana-pi.org/bpi-products.html)
+* [GATEWORKS single board computers](https://www.gateworks.com/products/)
+* [VIA Embedded Pico-ITX boards](https://www.viatech.com/en/boards/pico-itx/)
+* [VIA Embedded 3.5″ boards](https://www.viatech.com/en/boards/3-5-inch-sbc/)
+* [PINE64 single board computers](https://www.pine64.org)
+* [Onion](https://onion.io)
+* [CubieBoard](http://cubieboard.org/model/)
+* [BeagleBoard](http://beagleboard.org/boards)
+* [TinyCircuits](https://tinycircuits.com)
+
+## Useful links
+
+* [Comparison of open-source wireless drivers](https://en.wikipedia.org/wiki/Comparison_of_open-source_wireless_drivers)
+* [Beginners guide to a custom 802.11ac setup](http://pisarenko.net/blog/2015/02/01/beginners-guide-to-802-dot-11ac-setup/)
+* [Cryptographic hardware accelerators](https://openwrt.org/docs/techref/hardware/cryptographic.hardware.accelerators)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
