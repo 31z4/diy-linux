@@ -18,8 +18,8 @@ RUN set -ex; \
         wget; \
     rm -rf /var/lib/apt/lists/*
 
-ARG DISTRO_NAME=buildroot-2019.08
-ARG CHECKSUM=04440748d3d7a296af59c43c607639297240040c
+ARG DISTRO_NAME=buildroot-2019.08.1
+ARG CHECKSUM=3eb267c6416336c7cccee5ac115a0c40c8e71dfb
 
 # Download Buildroot, verify its checksum, untar and clean up.
 RUN set -ex; \
