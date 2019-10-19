@@ -11,7 +11,7 @@ iface wlan0 inet static
   address 10.0.0.1
   netmask 255.255.255.0
   pre-up hostapd -B /etc/hostapd.conf
-  post-up udhcpd
+  post-up udhcpd -S
   pre-down killall -q udhcpd
   post-down killall -q hostapd
   wait-delay 15
