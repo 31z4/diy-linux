@@ -1,6 +1,6 @@
 #!/bin/sh
 
-shift 2
+shift 1
 
 WIFI_ACCESS_POINT_SSID=${1?"WIFI_ACCESS_POINT_SSID has not been set."}
 WIFI_ACCESS_POINT_CHANNEL=${2?"WIFI_ACCESS_POINT_CHANNEL has not been set."}
