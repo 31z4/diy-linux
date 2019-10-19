@@ -62,7 +62,10 @@ Once build is successfully done you can follow general instructions to [flash th
 
 ## Future improvements
 
+* Read only root file system.
+* Decrease image size.
 * Set up DNS based ad filtering.
+* Enhance security.
 * Add basic monitoring capabilities.
 * Enhance logging.
 * Decrease power consumption.
