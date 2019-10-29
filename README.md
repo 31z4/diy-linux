@@ -41,7 +41,7 @@ To figure out an SD card disk name on macOS host run the following command:
 
 Double-check the disk name and flash the image to it:
 
-    sudo dd bs=1m if=images/sdcard.img of=/dev/disk-name
+    sudo dd bs=4m if=images/sdcard.img of=/dev/disk-name
 
 If you get the following error
 
@@ -54,6 +54,14 @@ unmounting the disk might help:
 Once `dd` process is finished don't forget to eject the disk:
 
     diskutil eject /dev/disk-name
+
+### Troubleshoot
+
+If a board has a UART port it's convenient to use a USB to UART cable to connect to the serial port.
+PL2303HX based cable is confirmed to work on macOS. Driver can be found [here](http://www.prolific.com.tw/US/ShowProduct.aspx?p_id=229&pcid=41).
+Once the driver is installed and a cable is connected use the following command.
+
+    sudo cu -s 115200 -l /dev/cu.usbserial
 
 ## Known issues
 
