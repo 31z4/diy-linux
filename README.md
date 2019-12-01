@@ -79,12 +79,14 @@ The build is slow and eventually fails if Buildroot `output` directory is a Dock
 * [CubieBoard](http://cubieboard.org/model/)
 * [BeagleBoard](http://beagleboard.org/boards)
 * [TinyCircuits](https://tinycircuits.com)
+* [Coral](https://coral.ai)
 
 ## Useful links
 
 * [Comparison of open-source wireless drivers](https://en.wikipedia.org/wiki/Comparison_of_open-source_wireless_drivers)
 * [Beginners guide to a custom 802.11ac setup](http://pisarenko.net/blog/2015/02/01/beginners-guide-to-802-dot-11ac-setup/)
 * [Cryptographic hardware accelerators](https://openwrt.org/docs/techref/hardware/cryptographic.hardware.accelerators)
+* [EROFS](https://en.wikipedia.org/wiki/EROFS)
 
 ## License
 
