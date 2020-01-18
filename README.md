@@ -80,6 +80,7 @@ The build is slow and eventually fails if Buildroot `output` directory is a Dock
 * [BeagleBoard](http://beagleboard.org/boards)
 * [TinyCircuits](https://tinycircuits.com)
 * [Coral](https://coral.ai)
+* [8devices](https://www.8devices.com)
 
 ## Useful links
 
