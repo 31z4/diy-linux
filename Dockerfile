@@ -1,6 +1,6 @@
 FROM debian:9-slim
 
-# Install required packges.
+# Install required packages.
 RUN set -ex; \
     apt-get update; \
     DEBIAN_FRONTEND=noninteractive \
